@@ -1,33 +1,50 @@
-DTA PERSONAL SOCCER MANAGER — PROTÓTIPO V1
+DTA PERSONAL SOCCER — STUDIO V2
+================================
 
-COMO USAR
-1. Abra index.html no navegador (computador) ou hospede os arquivos em GitHub Pages para testar no iPad.
-2. Acesse a visualização Coordenador e Professor pelo seletor no menu.
-3. Teste com dados FICTÍCIOS cadastro de atletas, avaliação inicial, registro de aulas e síntese bimestral.
-4. O botão Exportar JSON gera um backup demonstrativo do estado local.
+COMO PUBLICAR NO GITHUB PAGES (iPad):
+1) Descompacte este ZIP no app Arquivos.
+2) Abra o seu repositório DTA-SOCCER-MANEGER no GitHub.
+3) Envie TODOS os arquivos da pasta, mantendo a estrutura:
+   index.html
+   style.css
+   app.js
+   v2.js
+   assets/escudo-dta.jpg
+4) Se já existirem arquivos com esses nomes, substitua os arquivos equivalentes.
+5) Settings > Pages > Deploy from a branch > main > /(root).
+6) Atualize a página depois da publicação.
 
-ATENÇÃO
-- O protótipo NÃO TEM LOGIN REAL, banco de dados online, sincronização ou autenticação.
-- A alternância coordenador/professor é apenas visual, NÃO REPRESENTA CONTROLE SEGURO DE ACESSO.
-- Os dados são armazenados no localStorage do navegador. Podem ser perdidos ao limpar os dados do navegador.
-- Não inserir dados pessoais reais, de saúde ou de menores.
-- Publicar no GitHub Pages NÃO cria o banco de dados nem torna a aplicação apta ao uso real.
+O QUE FUNCIONA NESTE PROTÓTIPO:
+- Alternância simulada entre coordenador e professor
+- Cadastro de professores e atletas fictícios
+- Avaliações esportivas iniciais
+- Planejamento por ciclos individuais
+- Registros de sessão e histórico dos atletas
+- Síntese bimestral com aprovação demonstrativa
+- Exportação dos dados locais em JSON
+- Exportação dos registros de sessões em CSV
+- Importação de backup JSON (substitui os registros locais)
+- Interface adaptada para iPad e celulares
 
-PRÓXIMA ETAPA PARA PRODUÇÃO
-1. Configurar Supabase Auth (contas individuais de professores e coordenação).
-2. Migrar as tabelas atletas, vínculos, avaliações e aulas para PostgreSQL.
-3. Criar políticas RLS verificadas e autenticação efetiva.
-4. Adicionar auditoria, proteção de dados sensíveis, backup, recuperação, consentimentos e processo LGPD.
-5. Integrar exatamente os campos da avaliação bimestral DTA já existente.
-6. Testar integralmente com dados fictícios antes de entrar em produção.
+LIMITES IMPORTANTES:
+- Não existe login real, e a alternância de perfil NÃO é segurança.
+- Dados persistem somente no armazenamento local do mesmo navegador/aparelho.
+- Não há sincronização entre professores e coordenador.
+- Navegação privada, limpeza do navegador ou troca de aparelho podem apagar os dados locais.
+- GitHub Pages hospeda arquivos do site, não mantém bancos de dados privados.
+- NÃO INSIRA NOMES, DADOS DE SAÚDE OU INFORMAÇÕES REAIS DOS ATLETAS.
+- A ficha gráfica bimestral previamente feita ainda não foi integrada nesta V2.
+- O protótipo demonstra fluxo, não está preparado para uso de produção.
 
-PÁGINAS DO MVP
-- Painel do coordenador/professor
-- Cadastro e histórico de atletas
-- Registros de aula
-- Avaliação inicial esportiva
-- Síntese bimestral demonstrativa
-- Exportação JSON
+PRÓXIMA ETAPA PARA UTILIZAÇÃO REAL:
+- Supabase Auth: login individual de professores e coordenador.
+- Supabase PostgreSQL: registros persistidos e sincronizados.
+- RLS: acesso limitado aos atletas vinculados ao professor.
+- Registro de ações e alterações; backups e política de retenção.
+- Ficha de segurança dos atletas em módulo de acesso restrito.
+- Integração da avaliação bimestral oficial aprovada pela coordenação.
+- Testes de segurança, privacidade, usabilidade e consistência antes de uso real.
 
-IDENTIDADE VISUAL
-Vermelho, preto e branco. Escudo extraído do PowerPoint DTA Sports 2025 enviado pelo usuário.
+ATENÇÃO: manter a posse do repositório GitHub não dá acesso automático
+às informações de usuários em outros aparelhos. Isso somente será possível
+com backend e permissões de coordenação devidamente configurados.
